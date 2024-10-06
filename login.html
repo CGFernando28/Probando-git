@@ -1,32 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Página de inicio de sesión para acceder al sitio.">
+    
+    <!-- Enlace a hoja de estilos externa -->
     <link rel="stylesheet" href="styles.css">
-    <title>Iniciar Sesión</title>
+    
+    <title>Iniciar Sesión - Tu Sitio Web</title>
+
+    <!-- Mejora de accesibilidad para el icono de la página (favicon) -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
+
 <body>
+    <!-- Encabezado con navegación principal -->
     <header>
         <h1>Iniciar Sesión</h1>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="login.html">Iniciar Sesión</a>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="login.html" aria-current="page">Iniciar Sesión</a></li>
+            </ul>
         </nav>
     </header>
+
+    <!-- Contenido principal de la página -->
     <main>
-        <form action="#" method="POST">
-            <label for="username">Usuario:</label>
-            <input type="text" id="username" name="username" required>
-            <br>
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required>
-            <br>
-            <button type="submit">Iniciar Sesión</button>
-        </form>
+        <section aria-labelledby="login-form">
+            <h2 id="login-form">Formulario de Inicio de Sesión</h2>
+
+            <!-- Formulario con mejor estructura y accesibilidad -->
+            <form action="#" method="POST" novalidate>
+                <!-- Campo de usuario -->
+                <div>
+                    <label for="username">Usuario:</label>
+                    <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required aria-required="true" autocomplete="username">
+                </div>
+
+                <!-- Campo de contraseña -->
+                <div>
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required aria-required="true" autocomplete="current-password">
+                </div>
+
+                <!-- Botón de envío del formulario -->
+                <div>
+                    <button type="submit">Iniciar Sesión</button>
+                </div>
+            </form>
+        </section>
     </main>
+
+    <!-- Pie de página con copyright -->
     <footer>
-        <p>&copy; 2024 Tu Nombre</p>
+        <p>&copy; 2024 Tu Nombre. Todos los derechos reservados.</p>
     </footer>
+
 </body>
+
 </html>
