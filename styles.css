@@ -1,63 +1,124 @@
+/* Estilos básicos del cuerpo */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
 }
 
+/* Estilos del encabezado */
 header {
-    background: #333;
+    background-color: #282c34;
     color: #fff;
-    padding: 10px 20px;
+    padding: 15px 20px;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de navegación */
+nav {
+    margin-top: 10px;
 }
 
 nav a {
     color: #fff;
-    margin: 0 15px;
+    margin: 0 20px;
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
+nav a:hover {
+    color: #61dafb;
+}
+
+/* Estilos principales */
 main {
-    padding: 20px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 160px); /* Asegura que el contenido principal cubra la pantalla */
 }
 
+/* Estilos del formulario */
 form {
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
 }
 
+/* Estilos para etiquetas */
 label {
     display: block;
-    margin: 10px 0 5px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9em;
 }
 
-input {
+/* Estilos para campos de entrada */
+input[type="text"], input[type="password"] {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
 }
 
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #5cb85c;
+    outline: none;
+}
+
+/* Estilos del botón */
 button {
-    background: #5cb85c;
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
     color: white;
     border: none;
-    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 1em;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background: #4cae4c;
+    background-color: #218838;
 }
 
+/* Estilos del pie de página */
 footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #333;
+    background-color: #282c34;
     color: #fff;
-    position: relative;
+    text-align: center;
+    padding: 15px 0;
+    position: absolute;
     bottom: 0;
     width: 100%;
+    font-size: 0.85em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    form {
+        padding: 20px;
+        margin: 0 10px;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    header {
+        padding: 10px 15px;
+    }
 }
